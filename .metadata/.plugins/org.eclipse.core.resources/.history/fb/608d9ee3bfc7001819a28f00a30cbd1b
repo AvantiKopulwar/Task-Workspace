@@ -1,0 +1,25 @@
+package com.av;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+import javax.management.Query;
+
+public class JDBCquery {
+	Connection connection = null;
+	PreparedStatement preparedStatement = null;
+
+	public int addquery() {
+		try {
+        String query = "INSERT INTO student (firstName, lastName, gender, email, mobNo)  \r\n" + "VALUES (?, ?, ?, ?, ?)";
+		connection = DbUtilCon.getcon();
+		preparedStatement = connection.prepareStatement(query);
+		
+			
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		
+	}
+}

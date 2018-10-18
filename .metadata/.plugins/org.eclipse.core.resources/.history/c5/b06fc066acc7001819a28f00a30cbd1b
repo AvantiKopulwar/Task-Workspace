@@ -1,0 +1,12 @@
+package com.av;
+
+public class StudentVariables {
+	private int idstudent;
+	private String firstName;
+	private String lastName;
+	private String gender;
+	private String email;
+	private String mobNo;
+	private String password;
+
+}

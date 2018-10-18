@@ -1,0 +1,84 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register Page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+	<div class="container">
+		<h2 align="center">REGISTER PAGE</h2>
+		<form class="form-horizontal" action="register">
+			
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="FirstName">First
+					Name:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="FirstName"
+						placeholder="Enter First name" name="FirstName">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="LastName">Last
+					Name:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="LastName"
+						placeholder="Enter Last Name" name="LastName">
+				</div>
+			</div>
+			<div class="form-group ">
+					<label class="col-sm-offset-2 col-sm-10" > <input type="radio" name="optradio" checked>Female
+					</label> <label class="col-sm-offset-2 col-sm-10"> <input type="radio" name="optradio">Male
+					</label>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="Email">Email:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="Email"
+						placeholder="Enter Email" name="Email">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="MobileNumber">Mobile Number:</label>
+				<div class="col-sm-5">
+					<input type="text" class="form-control" id="Mobile Number"
+						placeholder="Enter Mobile No." name="Mobile Number">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="password">Password:</label>
+				<div class="col-sm-5">
+					<input type="password" class="form-control" id="password"
+						placeholder="Enter password" name="password">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2" for="Confirmpassword">Confirm Password:</label>
+				<div class="col-sm-5">
+					<input type="password" class="form-control" id="Confirmpassword"
+						placeholder="Enter Confirm password" name="Confirmpassword">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">Submit</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</body>
+</html>
+<%String message= (String) request.getAttribute("msg");
+out.println(message);
+%>

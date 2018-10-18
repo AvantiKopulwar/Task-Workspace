@@ -1,0 +1,31 @@
+package com.av;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+
+public class JDBCquery {
+
+	public static int addquery(StudentVariables sv) {
+		int status = 0;
+		try {
+			Connection connection = null;
+			PreparedStatement preparedStatement = null;
+			String query = "INSERT INTO student (firstName, lastName, gender, email, mobNo, password)  \r\n"
+					+ "VALUES (?, ?, ?, ?, ?, ?)";
+			connection = DbUtilCon.getcon();
+			preparedStatement = connection.prepareStatement(query);
+			preparedStatement.setString(1, sv.getFirstName());
+			preparedStatement.setString(1, sv.getLastName());
+			preparedStatement.setString(1, sv.getGender());
+			preparedStatement.setString(1, sv.getEmail());
+			preparedStatement.setString(1, sv.getMobNo());
+			preparedStatement.setString(1, sv.getPassword());
+			status = preparedStatement.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return status;
+	}
+}
